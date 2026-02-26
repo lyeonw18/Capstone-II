@@ -145,7 +145,7 @@ This demonstrates that illumination modeling at the data level is highly effecti
   - `basic_yolo_augment.py` : YOLO bounding box basic augmentation
   - `brightness_stage_aug.py` : Integrated pipeline for YOLO bbox + stage-based brightness augmentation
 
-- [yolo_training/](./src/yolo_training/) : YOLOv11 training & configuration scripts (handled by teammate, code not included)
+- yolo_training: YOLOv11 training & configuration scripts (handled by teammate, code not included)
 
 
 ## 11. References
