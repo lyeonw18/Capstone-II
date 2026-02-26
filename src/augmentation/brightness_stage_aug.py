@@ -150,6 +150,6 @@ if __name__ == "__main__":
             for cls, (x, y, w, h) in zip(aug_labels, aug_boxes):
                 f.write(f"{cls} {x:.6f} {y:.6f} {w:.6f} {h:.6f}\n")
 
-    print("\n🎉 brightness_stage_aug_1206 → Train 증강 완료!")
+    print("\n brightness_stage_aug_1206 Train 증강 완료")
     print("이미지:", dst_img_dir)
     print("라벨:", dst_lbl_dir)
