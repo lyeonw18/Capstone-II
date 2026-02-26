@@ -21,13 +21,15 @@ Due to large dataset size, only Brightness stages:
   - Stage 1: 24,888 images
   - Stage 3: 24,895 images
   - Stage 5: 24,867 images
-- Total JSON scanned: 74,650
+
+### Dataset Statistics
+- Total JSON annotations scanned: 74,650
 - Final usable images: ~73,634
-- Final classes after rare-class filtering: ~28 classes
+- Final classes after rare-class filtering: ~28
 
 ## 3. Class Balancing Strategy
 - Scanned 74,650 labeled JSON annotations
-- Total scene groups: ~2,300
+To prevent temporal redundancy, scene grouping was performed based on filename continuity (±30 frames), resulting in approximately 2,300 scene groups.
 - Removed classes with ≤300 instances
 - Removed near-duplicate frames
 - Selected 250 images per class
@@ -80,12 +82,12 @@ Two models were trained:
 
 
 ## 7. Experimental Results
-| Metric | Basic Aug | Stage-Adaptive Aug | Improvement |
+| Metric | Basic Aug | Stage-Adaptive Aug | Δ (%) |
 |--------|------------|-------------------|-------------|
-| Precision | 0.9310 | **0.9625** | +0.0315 |
-| Recall | 0.8648 | **0.9652** | +0.1004 |
-| mAP50 | 0.8788 | **0.9854** | +0.1066 |
-| mAP50-95 | 0.8140 | **0.8303** | +0.0163 |
+| Precision | 0.9310 | **0.9625** | +3.15% |
+| Recall | 0.8648 | **0.9652** | +10.04% |
+| mAP50 | 0.8788 | **0.9854** | +10.66% |
+| mAP50-95 | 0.8140 | **0.8303** | +1.63% |
 
 ### Key Findings
 - Significant improvement in mAP50 (+10.6%)
@@ -97,7 +99,7 @@ Performance gain is attributed to:
   - Balanced sampling
   - Stage-specific gamma redesign
 
-
+The most notable improvement was observed in recall and mAP50, indicating enhanced robustness under severe illumination conditions.
 
 ## 8. Generalization Test
 A separate set of 152 indoor/outdoor low-light images was collected.
