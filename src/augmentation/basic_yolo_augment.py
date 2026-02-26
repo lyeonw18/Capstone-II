@@ -86,6 +86,6 @@ for fname in tqdm(img_files, desc="기본 증강 중"):
 
     count += 1
 
-print(f"\n YOLO 기본 증강 완료: {count}장 생성!")
+print(f"\n YOLO 기본 증강 완료: {count}장 생성")
 print(" 저장 위치:", dst_img_dir)
 
