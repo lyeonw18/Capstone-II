@@ -85,6 +85,6 @@ for name, idx in sorted_map:
     print(f"{idx}: {name}")
 
 # 클래스 등장 횟수 출력
-print("\n===== 클래스 등장 횟수 =====")
+print("\n클래스 등장 횟수")
 for name, count in sorted(class_count.items(), key=lambda x: x[0]):
     print(f"{name}: {count}개")
