@@ -9,7 +9,7 @@ However:
 - They require an additional enhancement network, increasing inference latency and system complexity.
 - Improvement in image quality does not guarantee improved object detection mAP.
 
- Instead of restoring images, this study proposes a **data-centric brightness-stage adaptive augmentation framework**, allowing a YOLO-based detector to directly learn illumination variations without introducing extra networks.
+Instead of restoring images, this study proposes a **data-centric brightness-stage adaptive augmentation framework**, allowing a YOLO-based detector to directly learn illumination variations without introducing extra networks.
 
 The goal is to improve mAP under low-light conditions without architectural modification.
 
@@ -17,7 +17,7 @@ The goal is to improve mAP under low-light conditions without architectural modi
 
 ## 2. Dataset Construction
 ### Source
-AI-Hub Low-light Object Detection Dataset. Due to large dataset size, only Brightness stages:
+AI-Hub Low-light Object Detection Dataset. Due to its large scale, only the following brightness stages were selected:
   - Stage 1: 24,888 images
   - Stage 3: 24,895 images
   - Stage 5: 24,867 images
@@ -108,12 +108,13 @@ The model successfully detected objects under diverse illumination conditions, c
 
 
 ## 9. Conclusion
-Brightness-stage adaptive augmentation:
+Brightness-stage adaptive augmentation demonstrates:
 
-  - Improves detection robustness without adding inference complexity
-  - Outperforms baseline augmentation in key metrics
-  - Provides a lightweight data-centric alternative to low-light restoration networks
- This demonstrates that illumination modeling at the data level is highly effective for low-light object detection.
+- Improved detection robustness without additional inference complexity
+- Superior performance over baseline augmentation
+- A lightweight data-centric alternative to restoration-based pipelines
+
+This demonstrates that illumination modeling at the data level is highly effective for low-light object detection.
 
 
 ## 10. Repository Structure
