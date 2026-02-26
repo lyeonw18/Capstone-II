@@ -87,6 +87,12 @@ Two models were trained:
 | mAP50        | 0.8788    | **0.9854**        | +10.66%  |
 | mAP50-95     | 0.8140    | **0.8303**        | +1.63%   |
 
+### Training Curve
+![Training Curve](results/results.png)
+
+### Sample Detection
+![Test Image with BBoxes](results/val_batch0_labels.jpg)
+
 ### Key Findings
 - Significant improvement in mAP50 (+10.6%)
 - Recall dramatically increased (+10%)
