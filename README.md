@@ -8,7 +8,7 @@ However:
 - These methods optimize perceptual image quality rather than detection performance.
 - They require an additional enhancement network, increasing inference latency and system complexity.
 - Improvement in image quality does not guarantee improved object detection mAP.
-Instead of restoring images, this study proposes a **data-centric brightness-stage adaptive augmentation framework**, allowing a YOLO-based detector to directly learn illumination variations without introducing extra networks.
+ Instead of restoring images, this study proposes a **data-centric brightness-stage adaptive augmentation framework**, allowing a YOLO-based detector to directly learn illumination variations without introducing extra networks.
 
 The goal is to improve mAP under low-light conditions without architectural modification.
 
@@ -21,7 +21,7 @@ Due to large dataset size, only Brightness stages:
   - Stage 1: 24,888 images
   - Stage 3: 24,895 images
   - Stage 5: 24,867 images
-
+These stages represent progressively varying illumination severity and were selected to model realistic low-light transitions.
 ### Dataset Statistics
 - Total JSON annotations scanned: 74,650
 - Final usable images: ~73,634
@@ -29,13 +29,11 @@ Due to large dataset size, only Brightness stages:
 
 ## 3. Class Balancing Strategy
 - Scanned 74,650 labeled JSON annotations
-To prevent temporal redundancy, scene grouping was performed based on filename continuity (±30 frames), resulting in approximately 2,300 scene groups.
+- Scene grouping performed based on filename continuity (±30 frames), resulting in ~2,300 scene groups
 - Removed classes with ≤300 instances
 - Removed near-duplicate frames
 - Selected 250 images per class
 - Train / Val / Test split = 70 / 15 / 15
-
-This significantly reduced class imbalance and improved stability.
 
 
 ## 4. Brightness Stage Classification Model
@@ -83,7 +81,7 @@ Two models were trained:
 
 ## 7. Experimental Results
 | Metric | Basic Aug | Stage-Adaptive Aug | Δ (%) |
-|--------|------------|-------------------|-------------|
+|--------|------------|-------------------|-------|
 | Precision | 0.9310 | **0.9625** | +3.15% |
 | Recall | 0.8648 | **0.9652** | +10.04% |
 | mAP50 | 0.8788 | **0.9854** | +10.66% |
@@ -94,7 +92,9 @@ Two models were trained:
 - Recall dramatically increased (+10%)
 - High-confidence predictions reached ~0.99 precision
 - Stable detection under unseen low-light generalization set (152 images)
+  
 Performance gain is attributed to:
+
   - Rare-class filtering
   - Balanced sampling
   - Stage-specific gamma redesign
@@ -109,10 +109,11 @@ The model successfully detected objects under diverse illumination conditions, c
 
 ## 9. Conclusion
 Brightness-stage adaptive augmentation:
+
   - Improves detection robustness without adding inference complexity
   - Outperforms baseline augmentation in key metrics
   - Provides a lightweight data-centric alternative to low-light restoration networks
-This demonstrates that illumination modeling at the data level is highly effective for low-light object detection.
+ This demonstrates that illumination modeling at the data level is highly effective for low-light object detection.
 
 
 ## 10. Repository Structure
