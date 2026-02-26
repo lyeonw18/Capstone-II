@@ -51,4 +51,3 @@ for split in splits:
 
     print(f"{split} 완료")
 
-print("\n Stage 분류 & train/val/test 구조 생성 완료!")
