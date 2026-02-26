@@ -8,6 +8,7 @@ However:
 - These methods optimize perceptual image quality rather than detection performance.
 - They require an additional enhancement network, increasing inference latency and system complexity.
 - Improvement in image quality does not guarantee improved object detection mAP.
+
  Instead of restoring images, this study proposes a **data-centric brightness-stage adaptive augmentation framework**, allowing a YOLO-based detector to directly learn illumination variations without introducing extra networks.
 
 The goal is to improve mAP under low-light conditions without architectural modification.
@@ -16,8 +17,7 @@ The goal is to improve mAP under low-light conditions without architectural modi
 
 ## 2. Dataset Construction
 ### Source
-AI-Hub Low-light Object Detection Dataset
-Due to large dataset size, only Brightness stages:
+AI-Hub Low-light Object Detection Dataset. Due to large dataset size, only Brightness stages:
   - Stage 1: 24,888 images
   - Stage 3: 24,895 images
   - Stage 5: 24,867 images
@@ -80,12 +80,12 @@ Two models were trained:
 
 
 ## 7. Experimental Results
-| Metric | Basic Aug | Stage-Adaptive Aug | Δ (%) |
-|--------|------------|-------------------|-------|
-| Precision | 0.9310 | **0.9625** | +3.15% |
-| Recall | 0.8648 | **0.9652** | +10.04% |
-| mAP50 | 0.8788 | **0.9854** | +10.66% |
-| mAP50-95 | 0.8140 | **0.8303** | +1.63% |
+| Metric       | Basic Aug | Stage-Adaptive Aug | Δ (%)    |
+|--------------|-----------|-------------------|----------|
+| Precision    | 0.9310    | **0.9625**        | +3.15%   |
+| Recall       | 0.8648    | **0.9652**        | +10.04%  |
+| mAP50        | 0.8788    | **0.9854**        | +10.66%  |
+| mAP50-95     | 0.8140    | **0.8303**        | +1.63%   |
 
 ### Key Findings
 - Significant improvement in mAP50 (+10.6%)
