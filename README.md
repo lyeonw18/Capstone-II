@@ -12,7 +12,7 @@ Instead of restoring images, this study proposes a **data-centric brightness-sta
 
 The goal is to improve mAP under low-light conditions without architectural modification.
 
----
+
 
 ## 2. Dataset Construction
 ### Source
