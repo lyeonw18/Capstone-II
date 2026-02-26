@@ -138,3 +138,11 @@ This demonstrates that illumination modeling at the data level is highly effecti
 - `brightness_classifier/` : ResNet18 brightness prediction model
 - `augmentation/` : Stage-aware augmentation pipeline
 - `yolo_training/` : YOLOv11 configuration and training
+
+
+## 11. References
+Review of references related to low-light environment imaging:
+  - [Deep Retinex Decomposition for Low-Light Enhancement (2018)](../Paper-Reviews/Low-Light-Image-Enhancement/review1.md)
+  - [EnlightenGAN: Deep Light Enhancement without Paired Supervision (2019)](../Paper-Reviews/Low-Light-Image-Enhancement/review2.md)
+  - [Zero-Reference Deep Curve Estimation (2020)](../Paper-Reviews/Low-Light-Image-Enhancement/review3.md)
+
