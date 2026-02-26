@@ -111,7 +111,7 @@ The most notable improvement was observed in recall and mAP50, indicating enhanc
 A separate set of 152 indoor/outdoor low-light images was collected.
 
 ###  Sample Detection Results
-![Detection Example](results/val-batch0-labels.jpg)
+![Detection Example](results/resultsval-batch0-labels.jpg)
 
 The model successfully detected objects under diverse illumination conditions, confirming robustness beyond training distribution.
 
