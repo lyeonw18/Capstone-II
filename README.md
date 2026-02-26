@@ -111,9 +111,10 @@ The most notable improvement was observed in recall and mAP50, indicating enhanc
 A separate set of 152 indoor/outdoor low-light images was collected.
 
 ### Sample Raw Images
-![Raw Example 1](results/rawimage1.jpg)
-![Raw Example 2](results/rawimage2.jpg)
-![Raw Example 3](results/rawimage3.jpg)
+<img src="results/rawimage1.jpg" alt="Raw Image 1" width="300"/>
+<img src="results/rawimage2.jpg" alt="Raw Image 2" width="300"/>
+<img src="results/rawimage3.jpg" alt="Raw Image 3" width="300"/>
+
 
 ###  Sample Detection Results
 ![Detection Example](results/resultsval-batch0-labels.jpg)
