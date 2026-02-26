@@ -134,10 +134,18 @@ This demonstrates that illumination modeling at the data level is highly effecti
 
 ## 10. Repository Structure
 
-- `data_processing/` : Scene grouping & balancing scripts
-- `brightness_classifier/` : ResNet18 brightness prediction model
-- `augmentation/` : Stage-aware augmentation pipeline
-- `yolo_training/` : YOLOv11 configuration and training
+- [data_processing/](./src/data_processing/) : Scene grouping & balancing scripts
+  - `scene_split.py` : Group images/labels by scene and perform balancing
+
+- [brightness_classifier/](./src/brightness_classifier/) : ResNet18 brightness prediction model
+  - `stage_split.py` : Create train/val/test structure based on filename and classify brightness stage
+  - `augmen_class.py` : Train ResNet18 model for brightness stage classification
+
+- [augmentation/](./src/augmentation/) : Stage-aware augmentation pipeline
+  - `basic_yolo_augment.py` : YOLO bounding box basic augmentation
+  - `brightness_stage_aug.py` : Integrated pipeline for YOLO bbox + stage-based brightness augmentation
+
+- [yolo_training/](./src/yolo_training/) : YOLOv11 training & configuration scripts (handled by teammate, code not included)
 
 
 ## 11. References
